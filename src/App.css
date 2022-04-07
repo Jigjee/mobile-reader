@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.app {
+  max-width: 1920px;
+  max-height: 1800px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    width: 75%;
+    height: 75%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .app {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .app {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .app {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .app {
+    width: 33.33%;
+  }
+}
