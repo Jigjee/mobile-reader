@@ -9,6 +9,7 @@ const LoadPhoto = ({ closeLoadPhoto }) => {
         <button className="closebtn1" onClick={() => closeLoadPhoto(false)}>
           &times;
         </button>
+
         <div className="warning"></div>
         <div className="area">
           <h1>!</h1>

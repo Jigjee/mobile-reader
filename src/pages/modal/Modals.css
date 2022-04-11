@@ -78,7 +78,7 @@
   display: flex;
 }
 .menu-link {
-  padding-right: 5px;
+  padding-right: 2px;
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -233,7 +233,6 @@ button {
   padding-top: 8.25px;
   padding-left: 5px;
   margin-left: 10px;
-  /* border: solid 1px orange; */
 }
 
 .res_content {
@@ -256,25 +255,35 @@ button {
 .form-label {
   width: 25%;
   font-size: 12px;
+  color: #7b61ff;
 }
 .box-r {
   width: 30%;
   height: 20px;
+  border: solid 1px #e8f0fe;
 }
 
 .box-drop {
   height: 30px;
   width: 30%;
+  border: solid 1px #e8f0fe;
+  color: #2c304c;
+}
+.box-drop-1 {
+  border: solid 1px #e8f0fe;
+  border-radius: 2px;
+  color: #2c304c;
 }
 
-@media screen and (max-width: 840px) {
+/* mobile screen */
+@media only screen and (min-width: 280px) and (max-width: 653px) {
   .container {
     position: relative;
   }
 
   .tabs-con {
     position: absolute;
-    margin-top: -30px;
+    margin-top: -20px;
   }
   .tabs-content {
     height: 1600px;
@@ -301,8 +310,8 @@ button {
     width: 100%;
   }
   .crop-img {
-    width: 315px;
-    height: 215px;
+    width: 100%;
+    height: 100%;
   }
   .res_content {
     display: inline-block;
@@ -323,6 +332,7 @@ button {
     height: 25px;
   }
   .box-drop-1 {
+    border: solid 1px #e8f0fe;
     width: 100%;
     margin-top: 8px;
   }
@@ -343,14 +353,14 @@ button {
 
   .mobile-menu {
     display: block;
-    margin-top: 950%;
-    margin-left: 80%;
+    margin-top: 1250%;
+    margin-left: 84%;
     z-index: 1;
   }
 
   .menu {
-    margin-left: 10%;
-    margin-top: 950%;
+    margin-left: 5%;
+    margin-top: 1250%;
     width: 10%;
     height: auto;
     display: flex;
@@ -360,13 +370,228 @@ button {
   }
   .menu-link {
     padding-right: 5px;
-    width: 55px;
-    height: 55px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-content: center;
-    /* height: 10vw; */
+
     padding: 10px 0;
   }
+  @media only screen and (min-width: 360px) and (max-width: 740px) {
+    .mobile-menu {
+      display: block;
+      margin-top: 950%;
+      margin-left: 80%;
+      z-index: 1;
+    }
+    .menu {
+      margin-left: 10%;
+      margin-top: 950%;
+      width: 10%;
+    }
+    .menu-link {
+      width: 50px;
+      height: 50px;
+    }
+    @media only screen and (min-width: 375px) and (max-width: 780px) {
+      .mobile-menu {
+        margin-top: 890%;
+        margin-left: 77%;
+      }
+      .menu {
+        margin-left: 10%;
+        margin-top: 890%;
+      }
+
+      @media only screen and (min-width: 390px) and (max-width: 844px) {
+        .mobile-menu {
+          margin-top: 890%;
+          margin-left: 74%;
+        }
+        .menu {
+          margin-left: 10%;
+          margin-top: 890%;
+        }
+        @media only screen and (min-width: 410px) and (max-width: 915px) {
+          .mobile-menu {
+            display: block;
+            margin-top: 870%;
+            margin-left: 75%;
+            z-index: 1;
+          }
+          .menu {
+            margin-left: 15%;
+            margin-top: 870%;
+          }
+          @media only screen and (min-width: 414px) and (max-width: 940px) {
+            .mobile-menu {
+              display: block;
+              margin-top: 870%;
+              margin-left: 75%;
+              z-index: 1;
+            }
+            .menu {
+              margin-left: 15%;
+              margin-top: 870%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
+
+/* ipad screen */
+@media only screen and (min-device-width: 540px) and (max-device-width: 720px) and (orientation: portrait) {
+  .tabs-content {
+    height: 1700px;
+    margin-left: -15px;
+  }
+  .mobile-menu {
+    margin-top: 630%;
+    margin-left: 69%;
+  }
+  .menu {
+    margin-left: 17%;
+    margin-top: 630%;
+  }
+  .menu-link {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media only screen and (min-device-width: 540px) and (max-device-width: 720px) and (orientation: landscape) {
+  .closebtn {
+    margin-top: 6px;
+    margin-left: 99%;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .menu {
+    margin-left: 40%;
+    margin-top: 10px;
+  }
+  .menu-link {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .tabs-content {
+    height: 800px;
+    margin-top: -30px;
+  }
+  .closebtn {
+    margin-top: 6px;
+    margin-left: 99%;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .menu {
+    margin-left: 70%;
+    margin-top: 10px;
+  }
+  .menu-link {
+    width: 40px;
+    height: 40px;
+  }
+  .form-label {
+    width: 42%;
+  }
+  .box-drop {
+    width: 46.5%;
+    height: 35px;
+    margin-top: 8px;
+    border: solid 1px #e8f0fe;
+    color: #2c304c;
+  }
+  .box-r {
+    width: 45%;
+    border: solid 1px #e8f0fe;
+    color: #2c304c;
+  }
+}
+
+@media only screen and (min-device-width: 912px) and (max-device-width: 1368px) and (orientation: portrait) {
+  .tabs-content {
+    height: 950px;
+    margin-top: -30px;
+  }
+  .menu {
+    margin-left: 90%;
+    margin-top: 10px;
+  }
+  .form-label {
+    width: 42%;
+  }
+  .box-drop {
+    width: 43%;
+  }
+  .box-r {
+    width: 42%;
+  }
+}
+@media only screen and (min-device-width: 800px) and (max-device-width: 1368px) and (orientation: landscape) {
+  .tabs-con {
+    margin-top: -30px;
+  }
+  .menu {
+    margin-left: 83%;
+    margin-top: 12px;
+  }
+  .closebtn {
+    margin-top: 10px;
+    margin-left: 100%;
+  }
+}
+@media only screen and (min-device-width: 820px) and (max-device-width: 1180px) and (orientation: portrait) {
+  .tabs-content {
+    height: 950px;
+  }
+  .tabs-con {
+    margin-top: -35px;
+  }
+  .closebtn {
+    margin-top: 10px;
+    margin-left: 99%;
+  }
+  .menu {
+    margin-left: 72%;
+    margin-top: 12px;
+  }
+  .form-label {
+    width: 40%;
+  }
+  .box-drop {
+    width: 46.5%;
+  }
+  .box-r {
+    width: 45%;
+  }
+}
+@media only screen and (min-device-width: 600px) and (max-device-width: 1180px) and (orientation: landscape) {
+  .tabs-content {
+    height: 950px;
+  }
+  .tabs-con {
+    margin-top: -30px;
+  }
+  .closebtn {
+    margin-top: 10px;
+    margin-left: 99%;
+  }
+  .menu {
+    margin-left: 77%;
+    margin-top: 12px;
+  }
+}
+
+/* @media only screen and (min-device-width: 640px) and (max-device-width: 840px) and (orientation: portrait) {
+  .tabs-con {
+    margin-top: 10px;
+  } 
+}*/

@@ -2,15 +2,15 @@
 
 .container {
   font-family: "Nunito", sans-serif;
-  max-width: 100vw;
-  max-height: 100vh;
+  max-width: 1240px;
   margin: 0 auto;
   justify-content: center;
+  align-items: center;
   position: relative;
 }
 
 .load-con {
-  width: 90%;
+  width: 50%;
   height: 135px;
   background: #df3e3e;
   justify-content: space-around;
@@ -18,13 +18,14 @@
   display: flex;
   align-items: center;
   position: absolute;
-  margin-left: -10%;
-  margin-top: -18px;
+  margin-left: 25%;
+  margin-top: 15px;
+  z-index: 1;
 }
 
 .warning {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   background-color: #fff;
   border-radius: 50%;
   position: absolute;
@@ -36,10 +37,10 @@
   padding-bottom: 50px;
   position: absolute;
   margin-left: -75%;
-  margin-top: 7%;
-  font-size: 2rem;
+  margin-top: 8.5%;
+  font-size: 1.8rem;
   color: #df3e3e;
-  font-weight: 1000;
+  font-weight: 1500;
 }
 .closebtn1 {
   background: none;
@@ -48,8 +49,8 @@
   margin-left: 96.5%;
   cursor: pointer;
   font-size: 1rem;
-  position: absolute;
-  margin-top: -120px;
+  /* position: absolute; */
+  margin-top: -110px;
   margin-right: 10px;
   font-size: 20px;
 }
@@ -60,33 +61,113 @@
   position: absolute;
   margin-left: 20%;
 }
+.text-load h3 {
+  font-size: 22px;
+}
+.text-load p {
+  margin-top: -15px;
+  font-size: 18px;
+}
 
-@media screen and (max-width: 840px) {
+/* mobile screen */
+@media only screen and (min-width: 280px) and (max-width: 653px) {
   .load-con {
-    width: 120%;
-    height: 120px;
+    width: 90%;
+    height: 90px;
+    margin-left: 5%;
   }
 
   .warning {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 
   .area {
-    font-size: 1.2rem;
-    margin-top: 15%;
+    font-size: 1rem;
+    margin-top: 20%;
   }
 
   .closebtn1 {
-    margin-top: -110px;
+    margin-top: -70px;
   }
   .text-load h3 {
-    margin-top: 19px;
-    /* margin-bottom: -10px; */
-    font-size: 24px;
+    margin-top: 5px;
+
+    font-size: 16px;
   }
 
   .text-load p {
-    margin-top: -20px;
+    margin-top: -15px;
+    font-size: 12px;
+  }
+  @media only screen and (min-width: 360px) and (max-width: 740px) {
+    .area {
+      margin-top: 15%;
+    }
   }
 }
+
+/* ipad screen */
+@media only screen and (min-device-width: 540px) and (max-device-width: 720px) and (orientation: portrait) {
+  .load-con {
+    margin-left: 20%;
+    width: 60%;
+  }
+  .area {
+    font-size: 1rem;
+    margin-top: 14.5%;
+  }
+  .text-load h3 {
+    margin-top: 5%;
+  }
+}
+@media only screen and (min-device-width: 540px) and (max-device-width: 720px) and (orientation: landscape) {
+  .area {
+    font-size: 2rem;
+    margin-top: 14.5%;
+  }
+}
+/*
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .warning {
+    width: 55px;
+    height: 55px;
+  }
+  .load-con {
+    width: 160%;
+    margin-left: -23%;
+  }
+  .text-load {
+    width: 90%;
+    margin-left: 30%;
+  }
+  .area {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-device-width: 912px) and (max-device-width: 1368px) and (orientation: landscape) {
+  .load-con {
+    width: 110%;
+    margin-left: -20%;
+  }
+}
+
+@media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+  .load-con {
+    width: 125%;
+    margin-left: -25%;
+  }
+  .area {
+    margin-top: 7%;
+  }
+}
+
+@media only screen and (min-device-width: 820px) and (max-device-width: 1180px) and (orientation: portrait) {
+  .load-con {
+    width: 145%;
+    margin-left: -15%;
+  }
+  .area {
+    margin-top: 7%;
+  }
+} */
