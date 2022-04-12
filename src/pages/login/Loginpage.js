@@ -2,7 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 
 import { images } from "../../constants";
 import Modals from "../modal/Modals";
-import Menu from "../menu/Menu";
+import Toolbar from "../toolbar/Toolbar";
+import SideMenu from "../toolbar/sidemenu/SideMenu";
+import SideDrawer from "../toolbar/sidemenu/SideDrawer";
+import BackDrop from "../toolbar/backdrop/BackDrop";
 import ReactModal from "react-modal";
 import LoadPhoto from "../loadphoto/LoadPhoto";
 import "./Loginpage.css";
@@ -15,12 +18,15 @@ const Loginpage = () => {
     setIsOpen(!isOpen);
   }
 
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [openMenuLogin, setMenuLogin] = useState(false);
+  const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
 
-  function toggleMenu() {
-    setMenuOpen(!menuOpen);
-  }
+  const drawerToggleClickHandler = () => {
+    setSideDrawerOpen((s) => !s);
+  };
+
+  const backDropClickHandler = () => {
+    setSideDrawerOpen(false);
+  };
 
   const MODAL_STYLE = {
     overlay: {
@@ -39,31 +45,12 @@ const Loginpage = () => {
   };
   return (
     <div className="container">
-      <div className="header-con">
-        <div className="logo">
-          <img src={images.logo} alt="logo" />
-        </div>
-        <div className="hamberger">
-          <img
-            src={images.hamberger}
-            alt="hamberger"
-            onClick={() => {
-              setMenuLogin(true);
-            }}
-          />
-        </div>
+      <div style={{ height: "100%" }}>
+        <Toolbar drawerToggleClickHandler={drawerToggleClickHandler} />
 
-        <div className="header-btn">
-          <a href="#" className="btn-l">
-            Login
-          </a>
-          <a href="#" className="btn-r">
-            Register
-          </a>
-        </div>
+        <SideDrawer show={sideDrawerOpen} />
+        {sideDrawerOpen && <BackDrop click={backDropClickHandler} />}
       </div>
-
-      {openMenuLogin && <Menu closeMenuLogin={setMenuLogin} />}
 
       <ReactModal
         isOpen={isOpen}

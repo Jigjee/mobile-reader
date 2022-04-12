@@ -1,0 +1,83 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  align-items: center;
+}
+.backdrop p {
+  text-align: center;
+  font-size: 12px;
+  color: #b9bbd2;
+}
+.backdrop-btn {
+  margin-top: 40%;
+  margin-left: 12%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 12%;
+  justify-content: space-between;
+}
+.btn-l-4 a {
+  text-decoration: none;
+  color: #6a75ca;
+}
+.btn-l-4 {
+  font-family: "Nunito", sans-serif;
+  list-style: none;
+  width: 129.5px;
+  height: 25px;
+  border: 1px solid #e9f0fd;
+
+  border-radius: 3px;
+  align-items: center;
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  margin-left: 0;
+  padding-top: 5px;
+  transition: transform 3s ease-out;
+}
+.btn-r-4 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.btn-r-4 {
+  font-family: "Nunito", sans-serif;
+  padding-top: 5px;
+  width: 130.5px;
+  height: 25px;
+  text-align: center;
+  align-items: center;
+  border-radius: 3px;
+  background: #5d59f3;
+  font-size: 12px;
+  list-style: none;
+  transition: transform 3s ease-out;
+}
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+  .backdrop-btn {
+    margin-top: 30%;
+    margin-left: 22%;
+  }
+}
+@media only screen and (min-width: 360px) and (max-width: 896px) {
+  .backdrop-btn {
+    margin-top: 29%;
+    margin-left: 33%;
+    height: 80px;
+    width: 130.5px;
+
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 720px) and (orientation: portrait) {
+  .backdrop-btn {
+    margin-top: 23%;
+    margin-left: 37%;
+  }
+}

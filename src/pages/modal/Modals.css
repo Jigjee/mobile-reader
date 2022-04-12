@@ -444,22 +444,32 @@ button {
 }
 
 /* ipad screen */
-@media only screen and (min-device-width: 540px) and (max-device-width: 720px) and (orientation: portrait) {
+@media only screen and (min-device-width: 480px) and (max-device-width: 720px) and (orientation: portrait) {
   .tabs-content {
-    height: 1700px;
+    height: 1800px;
     margin-left: -15px;
   }
   .mobile-menu {
-    margin-top: 630%;
-    margin-left: 69%;
+    margin-top: 700%;
+    margin-left: 76%;
   }
   .menu {
     margin-left: 17%;
-    margin-top: 630%;
+    margin-top: 700%;
   }
   .menu-link {
     width: 60px;
     height: 60px;
+  }
+}
+@media only screen and (min-device-width: 540px) and (max-device-width: 720px) and (orientation: portrait) {
+  .mobile-menu {
+    margin-top: 660%;
+    margin-left: 69%;
+  }
+  .menu {
+    margin-left: 17%;
+    margin-top: 660%;
   }
 }
 @media only screen and (min-device-width: 540px) and (max-device-width: 720px) and (orientation: landscape) {

@@ -108,7 +108,7 @@
 }
 
 /* ipad screen */
-@media only screen and (min-device-width: 540px) and (max-device-width: 720px) and (orientation: portrait) {
+@media only screen and (min-device-width: 480px) and (max-device-width: 720px) and (orientation: portrait) {
   .load-con {
     margin-left: 20%;
     width: 60%;
@@ -121,7 +121,7 @@
     margin-top: 5%;
   }
 }
-@media only screen and (min-device-width: 540px) and (max-device-width: 720px) and (orientation: landscape) {
+@media only screen and (min-device-width: 510px) and (max-device-width: 720px) and (orientation: landscape) {
   .area {
     font-size: 2rem;
     margin-top: 14.5%;
